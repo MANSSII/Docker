@@ -1,0 +1,28 @@
+hello im mansi trying to push the git
+firstly i have clone the git vi command
+		git clone <copy the https link from git hub>
+
+
+makes the changes in the filesaor create a new file then
+
+check the 
+		
+		git status	
+
+now 
+
+		git add .
+
+then 
+		
+		git commit -m "<give some discription of wht you have done>"
+
+then 
+
+		git push 
+
+then add username
+
+then add token 
+
+
