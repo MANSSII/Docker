@@ -2,4 +2,7 @@ FROM centos:7
 
 RUN yum update -y
 
-CMD bash 
+RUN yum install httpd -y
+
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+
