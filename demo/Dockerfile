@@ -1,8 +1,14 @@
-FROM centos:7
+FROM ubuntu:latest
 
-RUN yum update -y
+# Install Apache
+RUN apt-get update && apt-get install -y apache2
 
-RUN yum install httpd -y
+# Set the default port to 80
+ENV APACHE_PORT=80
 
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+# Copy the startup script
+COPY start.sh /usr/local/bin/start.sh
+
+# Update the entrypoint
+ENTRYPOINT ["/usr/local/bin/start.sh"]
 
