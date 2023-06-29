@@ -1,0 +1,7 @@
+FROM ubuntu:latest
+
+COPY greet.sh /usr/local/bin/greet.sh
+RUN chmod +x /usr/local/bin/greet.sh
+
+CMD /usr/local/bin/greet.sh $NAME
+
